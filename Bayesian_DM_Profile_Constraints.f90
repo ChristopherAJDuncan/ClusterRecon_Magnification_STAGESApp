@@ -285,6 +285,9 @@ contains
     S1_Magnitude_Limits_byCluster(3,:) = (/23.e0_double,26.e0_double/)
     S2_Magnitude_Limits_byCluster(3,:) = (/23.e0_double,26.e0_double/)
 
+    print *, 'NOTE: This needs to be edited by hand in the 4-cluster- 7-CLuster conversion'
+    read(*,*)
+
     !--Copy Input File to output directory--!
     call system('cp '//trim(Input_File)//' '//trim(Output_Directory)//'Input_File.ini')
     call system('cp '//trim(Cluster_Filename)//' '//trim(Output_Directory)//'Input_Cluster.clus')

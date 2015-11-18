@@ -717,7 +717,9 @@ contains
 
     print *, 'Got source sample. Sample contains:', size(Group_Cat%RA), ' sources'
     print *, 'and has limits (Mag, Size):', minval(Group_Cat%MF606W), maxval(Group_Cat%MF606W), minval(Group_Cat%Sizes), maxval(Group_Cat%Sizes)
+    print *, 'Grouped by Method:', count(Group_Cat%Posterior_Method == 0), count(Group_Cat%Posterior_Method == 1), count(Group_Cat%Posterior_Method == 2), count(Group_Cat%Posterior_Method == 3), count(Group_Cat%Posterior_Method == 4)
     write(*,'(A)') '_____________________________________________________________________________________________________'
+    read(*,*)
 
     call Catalogue_Destruct(Group_Cat); deallocate(iGroup_Index)
     
